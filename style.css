@@ -1,0 +1,50 @@
+
+.gradient-background {
+  background: linear-gradient(135deg, #fbc2eb, #a6c1ee, #fcd5ce, #d9e4dd);
+  background-size: 400% 400%;
+  animation: pastelFlow 12s ease infinite;
+
+  height: 40vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Courier New', monospace;
+  position: relative;
+}
+
+.gradient-background::after {
+  content: 'for(let i = 0; i < 💖; i++) { code(); }';
+  color: #333;
+  font-size: 1.3rem;
+  animation: floaty 3s ease-in-out infinite;
+  padding: 0.5rem 1rem;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 12px;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+@keyframes floaty {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+@keyframes pastelFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+
